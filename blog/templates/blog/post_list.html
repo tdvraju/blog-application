@@ -5,21 +5,22 @@
     <title>druva's blog</title>
 </head>
 <body>
-    <h1>
-        <a href="https://gaana.com/album/tholi-prema">tholiprema songs</a>
-    </h1>
     <div>
-        <h2>
-            <a href="">my first post</a>
-        </h2>
-        <p> tholiprema movie songs baavuntay.</p>
+        <h1>
+            <a href="/" target="_blank">Druva's blog</a>
+        </h1>
     </div>
-    <div>
-        <h2>
-            <a href="">my second post</a>
-        </h2>
-        <p> tholiprema movie songs baagov.- the critics</p>
-    </div>
+
+    {% for post in posts %}
+        <div>
+            <p>published date: {{post.published_date}}</p>
+            <h2>
+                <a href="">{{post.title}}</a>
+            </h2>
+            <p>{{post.text|linebreaksbr}}</p>
+        </div>
+    {% endfor %}
+
 
 </body>
 </html>
